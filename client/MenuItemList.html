@@ -1,0 +1,32 @@
+<template name="MenuItemsList">
+<div class="container">
+<h3>Item List</h3>
+	   <table>
+        <thead>
+          <tr>
+              <th data-field="id">Name</th>
+              <th data-field="name">Category</th>
+              <th data-field="price">Description</th>
+              <th data-field="price">Price</th>
+              <th data-field="price">Under Cooked</th>
+              <th data-field="price">Vegetarian</th>
+              <th data-field="price">Add</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        {{#each allMenuItems}}
+          <tr>
+            <td>{{Name}}</td>
+            <td>{{Category}}</td>
+            <td>{{Description}}</td>
+            <td>{{Price}}</td>
+            <td>{{UndercookedWarning}}</td>
+            <td>{{#if compareHelper Vegetarian}} Veg {{/if}}</td>
+            <td><a id="addToCurrentMenu" class="btn-floating btn-medium teal"><i class="medium fa fa-plus"></i></a></td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+</div>
+</template>

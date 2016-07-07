@@ -1,0 +1,59 @@
+<template name="CurrentMenu_FinalPrint">
+	<h3>Menu</h3>
+
+	{{#if getCurrentMenu_MeyhaneSnacks}}
+      <ul class="collection with-header">
+        <li class="collection-header"><h4>MeyhaneSnacks</h4></li>
+    	{{#each getCurrentMenu_MeyhaneSnacks}}
+      		<li class="collection-item">{{Name}}</li>
+      	{{/each}}
+      </ul>
+	{{/if}}
+
+	{{#if getCurrentMenu_Meze}}
+      <ul class="collection with-header">
+        <li class="collection-header"><h4>Meze</h4></li>
+    	{{#each getCurrentMenu_Meze}}
+      		<li class="collection-item">{{Name}}</li>
+      	{{/each}}
+      </ul>
+	{{/if}}
+
+	{{#if getCurrentMenu_Shish}}
+       <ul class="collection with-header">
+        <li class="collection-header"><h4>Shish</h4></li>
+    	{{#each getCurrentMenu_Shish}}
+      		<li class="collection-item">{{Name}}</li>
+      	{{/each}}
+      </ul>
+ 	{{/if}}    
+
+	{{#if getCurrentMenu_Sarma}}
+      <ul class="collection with-header">
+        <li class="collection-header"><h4>Sarma</h4></li>
+    	{{#each getCurrentMenu_Sarma}}
+      		<li class="collection-item">{{Name}}</li>
+      	{{/each}}
+      </ul>
+	{{/if}}
+
+	{{#if getCurrentMenu_Dessert}}
+      <ul class="collection with-header">
+        <li class="collection-header"><h4>Dessert</h4></li>
+    	{{#each getCurrentMenu_Dessert}}
+      		<li class="collection-item">{{Name}}</li>
+      	{{/each}}
+      </ul>
+	{{/if}}
+	
+	{{#if getCurrentMenu_PancakesPiePide}}
+      <ul class="collection with-header">
+        <li class="collection-header"><h4>Pancakes, Pie & Pide</h4></li>
+    	{{#each getCurrentMenu_PancakesPiePide}}
+      		<li class="collection-item">{{Name}}</li>
+      	{{/each}}
+      </ul>
+	{{/if}}
+
+
+</template>
