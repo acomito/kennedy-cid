@@ -1,6 +1,6 @@
 # kennedy-cid
 
-# getting started
+### getting started
 
 Clone the project
 
