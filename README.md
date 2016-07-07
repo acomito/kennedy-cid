@@ -5,4 +5,7 @@
 
 * git clone https://github.com/arcomito/kennedy-cid
 * cd kennedy-cid
-* meteor
+
+```javascript
+meteor
+```
