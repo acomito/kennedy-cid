@@ -11,6 +11,7 @@
               <th data-field="price">Under Cooked</th>
               <th data-field="price">Vegetarian</th>
               <th data-field="price">Add</th>
+              <th data-field="price">Remove</th>
           </tr>
         </thead>
 
@@ -21,9 +22,10 @@
             <td>{{Category}}</td>
             <td>{{Description}}</td>
             <td>{{Price}}</td>
-            <td>{{UndercookedWarning}}</td>
-            <td>{{#if compareHelper Vegetarian}} Veg {{/if}}</td>
-            <td><a id="addToCurrentMenu" class="btn-floating btn-medium teal"><i class="medium fa fa-plus"></i></a></td>
+            <td>{{#if property}} <span class="chip orange  lighten-4">Undercooked</span> {{/if}}</td>
+            <td>{{#if compareHelper Vegetarian}} <span class="chip green lighten-4">Vegetarian</span> {{/if}}</td>
+            <td><a id="addToCurrentMenu" class="btn-floating btn-large teal"><i class="medium fa fa-plus"></i></a></td>
+            <td><a id="deleteItemFromDB" class="btn-floating btn-large red"><i class="medium fa fa-trash"></i></a></td>
           </tr>
           {{/each}}
         </tbody>

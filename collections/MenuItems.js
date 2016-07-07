@@ -1,10 +1,32 @@
 let Schemas = {};
 
+/*Meyhane Snacks
+Meze
+Vegetables
+Shish
+Sarma
+Dessert
+Pancakes, Pie & Pide*/
+
 Schemas.MenuItems = new SimpleSchema({
     Category: {
         type: String,
         label: "Category:",
-        max: 200
+        max: 50,
+        autoform: {
+            type: "select",
+            options: function () {
+            return [
+                {label: "Meyhane Snacks", value: "Meyhane Snacks"},
+                {label: "Meze", value: "Meze"},
+                {label: "Vegetables", value: "Vegetables"},
+                {label: "Shish", value: "Shish"},
+                {label: "Sarma", value: "Sarma"},
+                {label: "Dessert", value: "Dessert"},
+                {label: "Pancakes, Pie & Pide", value: "Pancakes, Pie & Pide"}
+            ];
+            }
+        }
     },
     Name: {
         type: String,
@@ -20,15 +42,35 @@ Schemas.MenuItems = new SimpleSchema({
     Price: {
         type: Number,
         optional: false,
-         label: "Price:"
+        label: "Price:",
+        min: 0,
+        max: 100
     },
     Vegetarian: {
         type: Number,
-        label: 'Vegetarian?'
+        label: 'Vegetarian?',
+        autoform: {
+            type: "select",
+            options: function () {
+            return [
+                {label: "yes", value: 1},
+                {label: "no", value: 0},
+            ];
+            }
+        }
     },
     "Undercooked Warning": {
         type: Number,
         label: 'Undercooked Warning?',
+        autoform: {
+            type: "select",
+            options: function () {
+            return [
+                {label: "yes", value: 1},
+                {label: "no", value: 0},
+            ];
+            }
+        }
     }
 });
 

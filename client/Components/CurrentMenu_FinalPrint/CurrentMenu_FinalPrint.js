@@ -1,11 +1,4 @@
 
-/*
-
-
-
-*/
-
-
 
 const returnMatchedItem = function(itemType){
 		var currentMenu = Session.get('CurrentMenuList');
@@ -46,6 +39,12 @@ Template.CurrentMenu_FinalPrint.helpers({
 		var currentMenu_MeyhaneSnacks = returnMatchedItem("Pancakes, Pie & Pide");
 		return currentMenu_MeyhaneSnacks;
 	},
+	property: function(){
+		var item = this["Undercooked Warning"];
+		if (item === 1) {return true}
+		if (item === 0) {return false}
+		return false;
+	}
 
 
 });

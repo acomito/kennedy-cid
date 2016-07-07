@@ -7,12 +7,13 @@ Template.MenuItemsList.onCreated(function(){
 
 Template.MenuItemsList.helpers({
 	allMenuItems: function(){
-		let menuItems = MenuItems.find();
-		menuItems.forEach(function(item){
-			item["UndercookedWarning"] = item["Undercooked Warning"];
-		});
-		console.log(menuItems);
-		return menuItems;
+		return MenuItems.find();
+	},
+	property: function(){
+		var item = this["Undercooked Warning"];
+		if (item === 1) {return true}
+		if (item === 0) {return false}
+		return false;
 	}
 });
 
@@ -32,10 +33,17 @@ Template.MenuItemsList.events({
 			"Vegetarian": this.Vegetarian
 		};
 
+		//todo: check array for _id, to make sure you don't add duplicate items to currentMenu
 		currentMenu.push(menuItemToAdd);
 		Session.set('CurrentMenuList', currentMenu);
-		console.log(Session.get('CurrentMenuList'));
+		Bert.alert( this.Name + ' was added to current menu!', 'info', 'growl-top-right' );
+	},
+
+	'click #deleteItemFromDB': function(){
+		Meteor.call('DeleteMenuItem', this._id);
+		Bert.alert( this.Name + ' Deleted from DB!', 'danger', 'growl-top-right' );
 	}
+
 });
 
 

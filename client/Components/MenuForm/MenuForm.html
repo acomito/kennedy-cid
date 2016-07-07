@@ -6,12 +6,12 @@
 
 			<span class="card-title">Add Item to DB</span>
 		        {{#autoForm id="AddMenuItem" collection="MenuItems"  meteormethod="AddMenuItem" type="method"}}
-		                        {{> afQuickField name="Category"}}
+		                        {{> afQuickField name="Category"  options=categoryOptions}}
 		                        {{> afQuickField name="Name"}}
 		                        {{> afQuickField name="Description"}}
 		                        {{> afQuickField name="Price"}}
-		                        {{> afQuickField name="Undercooked Warning"}}
-		                        {{> afQuickField name="Vegetarian"}}
+		                        {{> afQuickField name="Undercooked Warning" }}
+		                        {{> afQuickField name="Vegetarian" }}
 		                  <button type="submit" class="waves-effect waves-light btn">Submit</button>
 		                  <a type="button" class=" toggleShowForm waves-effect waves-light grey btn">Cancel</a>
 		        {{/autoForm}}
@@ -19,7 +19,10 @@
 		</div>
 		
 		{{else}}
-			<a type="button"  class=" toggleShowForm waves-effect waves-light btn">Add Item to DB</a>
+		<div class="btn-container">
+			<a type="button"  class="valign toggleShowForm waves-effect waves-light btn">Add Item to DB</a>
+		</div>
+			
 	{{/if}}
 
 </template>

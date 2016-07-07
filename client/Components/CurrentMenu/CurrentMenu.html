@@ -5,7 +5,7 @@
 	{{#if getCurrentMenu}} 
     <ul class="collection">
     	{{#each getCurrentMenu}}
-      		<li class="collection-item">{{Name}}</li>
+      		<li class="collection-item">{{Name}} - {{Category}}  <a href="#" id="removeMenuItem" class="red-text text-lighten-2 secondary-content"><i class=" small fa fa-times"></i></a></li>
       	{{/each}}
     </ul>
     <a class="waves-effect waves-light btn light-blue" href="/Print">Print</a>

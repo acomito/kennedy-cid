@@ -6,3 +6,7 @@ Template.registerHelper('compareHelper', function(value) {
 	return false;
 
 });
+
+
+
+AutoForm.setDefaultTemplate('materialize');
