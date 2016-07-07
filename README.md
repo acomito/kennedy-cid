@@ -13,7 +13,7 @@ get into the project
 cd kennedy-cid
 ```
 
-then run 
+then run meteor inside project directory
 ```javascript
 meteor
 ```
