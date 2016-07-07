@@ -3,6 +3,6 @@
 
 # getting started
 
-* git clonehttps://github.com/arcomito/kennedy-cid
+* git clone https://github.com/arcomito/kennedy-cid
 * cd kennedy-cid
 * meteor
